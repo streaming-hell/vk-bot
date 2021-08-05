@@ -114,7 +114,7 @@ async def on_message_handler(msg: Message):
 
         async with ClientSession() as session:
             print(quote(url))
-            async with session.get('http://localhost:8000/api/v1/links', params={"url": quote(url)}) as resp:
+            async with session.get('https://streaming-hell.com/api/v1/links', params={"url": quote(url)}) as resp:
                 result = await resp.json()
                 print(result)
 
